@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-nav {
+            color: #DEBA9A;
+        }
+
+        .gray {
+            background-color: #F9F7F7;
+        }
+
+        .text-gray-600 {
+            color: #616061;
+        }
+
+        .bg-primary-50 {
+            color: #F9F7F7
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mx-auto bg-white font-['Lato'] font-sans">
+        <div class="bg-stone-50">
+            <div class="columns-2 py-48 px-2">
+                <div class="text-right px-10">
+                    <img class="w-[550px] inline-block" src="./img/01-app.png" />
+                </div>
+                <div class="pt-10">
+                    <div class="text-zinc-600 text-2xl font-semibold">Tạo QR thanh toán</div>
+                    <div class="text-zinc-900 text-3xl font-bold mt-5">Thu Họ</div>
+                    <div class="w-[351px] mt-2 text-zinc-600 text-lg font-normal leading">Bot giúp bạn tạo QR nhanh
+                        chóng trên Slack, lưu trữ account, tạo QR dựa trên số lượng reaction.</div>
+                    <a href="">
+                        <img class="mt-8" src="./img/02-add-to-slack.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <div class="mx-auto text-center w-96 xl:w-2/6 my-16 text-zinc-900 text-lg">
+                Dễ dàng tạo mã
+                <strong>QR</strong>
+                ngay trên
+                <strong>Slack</strong>
+                và gửi tới họ. Lưu trữ tài khoản, tạo QR dựa trên lượng reaction và thống kê số lượng reaction một emoji
+                nào đó.
+            </div>
+            <div class="flex space-x-16 place-content-center place-items-center">
+                <div class="mb-10">
+                    <div class="text-center text-emerald-300 text-3xl font-bold">Tạo mã QR trong một nốt nhạc</div>
+                    <div class="mt-5 text-black text-xl w-96">Hỗ trợ tạo mã QR thanh toán qua ngân hàng và Ví điện tử
+                        MoMo với số tiền và nội dung cần thanh toán. Có thể gửi tới nhiều người cùng lúc.</div>
+                </div>
+                <img src="./img/03-create-qr-1.5x.png" />
+            </div>
+
+            <div class="mt-48 grid grid-cols-2 place-content-center place-items-center">
+                <img src="./img/04-btn-paid.png" />
+                <div class="place-self-start mt-24">
+                    <div class="text-3xl font-bold text-sky-300">Thanh toán thuận tiện</div>
+                    <div class="mt-5 text-black text-xl w-96">QR với đầy đủ nội dung và số tiền, hạn chế nhầm lẫn. Nút
+                        bấm giúp gửi thông báo tới người yêu cầu, đồng thời dễ dàng biết được các giao dịch đang chờ.
+                    </div>
+                </div>
+            </div>
+            <div class="mt-48 grid grid-cols-2 place-content-center">
+                <div class="mt-10 place-self-center">
+                    <div class="text-3xl font-bold text-amber-400">Quản lý dễ dàng</div>
+                    <div class="mt-5 text-black text-xl w-96">Dễ dàng biết được giao địch đã thanh toán và giao dịch
+                        đang chờ.</div>
+                </div>
+                <img class="w-[500px]" src="./img/05-paid-2x.png" />
+            </div>
+            <!-- Home App -->
+            <div class="mt-48 grid grid-cols-2">
+                <img class="w-[600px] place-self-end" src="./img/06-app-home-1.5x.png" />
+                <div class="mt-32 place-self-start ml-10">
+                    <div class=" text-emerald-300 text-3xl font-bold">Home App tiện lợi</div>
+                    <div class="text-black text-xl font-normal mt-5">
+                        Rất nhiều tính năng có thể tương tác trực <br />
+                        tiếp qua Home App một cách nhanh chóng, tiện lợi.
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Mention -->
+            <div class="mt-48 grid grid-cols-2 place-content-center">
+                <div class="place-self-center">
+                    <div class="text-sky-300 text-3xl font-bold">Đặt đơn cùng nhau</div>
+                    <div class="mt-10 w-96 text-xl">
+                        Mention
+                        <strong>@thu_ho</strong>
+                        để chốt số lượng người tham gia đặt đơn cùng nhau. Tạo QR tới những người đã react chưa bao giờ
+                        nhanh đến thế.
+                    </div>
+                </div>
+                <img class="" src="./img/07-reaction-1x.png" />
+            </div>
+
+            <!-- App Mention Watch -->
+            <div class="mt-48 grid grid-cols-2">
+                <img class="place-self-center" src="./img/08-app-mention-watch-1x.png" />
+                <div class="">
+                    <div class="text-pink-600 text-3xl font-bold">Thanh toán trước, đếm người sau</div>
+                    <div class="mt-10 w-[32rem] text-xl">
+                        Cùng nhau góp quỹ, mention <strong>@thu_ho watch :emoji:</strong>
+                        để đếm số lượng người hoàn thành thanh toán. Mã thanh toán sẽ được gửi ngay trong
+                        thread giúp mọi người thanh toán. Sau đó người dùng sẽ reaction. </span></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="mt-10 bg-stone-50">
+            <div class="text-center py-20">
+                <div class="text-zinc-600 text-xl font-semibold">Cách cài đặt</div>
+                <div class="text-zinc-900 text-3xl mt-2 font-bold">Thu Họ</div>
+            </div>
+            <div class="mt-10 mx-auto container grid grid-cols-3">
+                <div class="text-center">
+                    <div class="text-emerald-300 text-xl font-semibold">Step 1</div>
+                    <div class="text-zinc-600 py-4">
+                        Thêm Thu Họ vào <br />
+                        workspace bằng cách click <br />
+                        vào nút <strong>Add to Slack</strong>
+                    </div>
+                    <img class="inline-block" src="./img/02-add-to-slack.png" />
+                </div>
+                <div class="text-center">
+                    <div class="text-sky-300 text-xl font-semibold">Step 2</div>
+                    <div class="text-zinc-600 mt-4">
+                        Allows Thu Họ với các quyền cần <br />
+                        thiết để có thể sử dụng tính năng <br />
+                        @app_mention và đọc emoji trong <br />
+                        thread.
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-pink-600 text-xl font-semibold">Step 3</div>
+                    <div class="text-zinc-600 py-4">
+                        Done! Thêm account và tận hưởng <br />
+                        những tính năng tuyệt vời.
+                    </div>
+                    <img class="inline-block mt-5" src="./img/00-thu-ho-logo-50px.png" />
+                </div>
+            </div>
+            <div class="text-center py-20 mt-10">
+                Made by <strong>@dotuancd</strong> with ❤️‍🔥 Sponsored by
+                <strong>FLINTERS VIETNAM</strong>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
