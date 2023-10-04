@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="slack-app-id" content="A053DRT4ZMH">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,10 +33,6 @@
             background-color: #F9F7F7;
         }
 
-        .bg-nav {
-            background-color: #514A48;
-        }
-
         .text-gray-600 {
             color: #616061;
         }
@@ -39,25 +40,37 @@
         .bg-primary-50 {
             color: #F9F7F7
         }
+
+        .float {  
+            animation-name: ani-float;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out; 
+        }
+        
+        @keyframes ani-float {
+            0% { transform: translate(0,  0px); }
+            50% { transform: translate(0, 10px); }
+            100% { transform: translate(0, -0px); }    
+        }
     </style>
 </head>
 
-<body class="font-['Lato'] font-sans bg-white">
-    <nav class="bg-nav text-2xl font-normal text-nav py-4 text-right">
-        <div class="container mx-auto">
+<body class="font-['Noto sans'] bg-white">
+    <!-- <nav class="bg-slate-800/90 text-gray-100 backdrop-blur-sm text-2xl font-normal text-nav py-4 top-0 left-0 right-0">
+        <div class="container mx-auto flex justify-end">
             <a href="" class="mx-8">Privacy</a>
             <a href="">Support</a>
         </div>
-    </nav>
-    <div class="bg-stone-50">
-        <div class="columns-2 py-48 px-2">
-            <div class="text-right px-10">
-                <img class="w-[550px] inline-block" src="./img/01-app.png" />
-            </div>
-            <div class="pt-10">
-                <div class="text-zinc-600 text-2xl font-semibold">Tạo QR thanh toán</div>
-                <div class="text-zinc-900 text-3xl font-bold mt-5">Thu Họ</div>
-                <div class="w-[351px] mt-2 text-zinc-600 text-lg font-normal leading">Bot giúp bạn tạo QR nhanh
+    </nav> -->
+    <!-- Mobile -->
+    <div class="bg-slate-900 md:hidden">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-5 py-10 px-2">
+            <div class="text-9xl font-bold size bg-[linear-gradient(0.25turn,#eee,#a39ac2)] bg-clip-text text-transparent mt-5 mb-5">Thu Họ</div>
+            <img class="w-full px-10 inline-block" src="./img/01-app.png" />
+            <div class="mt-10 flex flex-col gap-2 items-center">
+                <div class="text-white text-2xl">Tạo QR thanh toán</div>
+                <div class="max-w-[351px] mt-2 text-white text-lg font-normal">Bot giúp bạn tạo QR nhanh
                     chóng trên Slack, lưu trữ account, tạo QR dựa trên số lượng reaction.
                 </div>
                 <a target="_blank" href="https://qr.dotuan.dev/slack/install">
@@ -66,7 +79,26 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto">
+    <!-- PC -->
+    <div class="bg-slate-900 h-[850px] hidden md:block">
+        <div class="flex flex-col gap-5 py-10 px-2 mx-10">
+            <div class="mt-10 flex flex-col gap-5 items-center z-10">
+                <div class="text-white text-5xl">Tạo QR thanh toán</div>
+                <div class="text-white text-8xl font-bold mt-5">Thu Họ</div>
+                <div class="max-w-[700px] mt-2 text-4xl text-white font-extralight">Bot giúp bạn tạo QR nhanh
+                    chóng trên Slack, lưu trữ account, tạo QR dựa trên số lượng reaction.
+                </div>
+                <a target="_blank" href="https://qr.dotuan.dev/slack/install" class="scale-150">
+                    <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
+                </a>
+            </div>
+            <div class=" mt-20 translate-x-[50vw]">
+                <img class="h-[550px]" src="./img/01-app.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto md:mt-[20vh]">
         <div class="mx-auto text-center w-96 xl:w-2/6 my-16 text-zinc-900 text-lg">
             Dễ dàng tạo mã
             <strong>QR</strong>
@@ -75,7 +107,7 @@
             và gửi tới họ. Lưu trữ tài khoản, tạo QR dựa trên lượng reaction và thống kê số lượng reaction một emoji
             nào đó.
         </div>
-        <div class="flex space-x-16 place-content-center place-items-center">
+        <div class="flex flex-col md:flex-row space-x-16 place-content-center place-items-center">
             <div class="mb-10">
                 <div class="text-center text-emerald-300 text-3xl font-bold">Tạo mã QR trong một nốt nhạc</div>
                 <div class="mt-5 text-black text-xl w-96">Hỗ trợ tạo mã QR thanh toán qua ngân hàng và Ví điện tử
@@ -84,16 +116,16 @@
             <img src="./img/03-create-qr-1.5x.png" />
         </div>
 
-        <div class="mt-48 grid grid-cols-2 place-content-center place-items-center">
+        <div class="mt-48 flex flex-col-reverse gap-5 md:flex-row place-content-center place-items-center">
             <img src="./img/04-btn-paid.png" />
-            <div class="place-self-start mt-24">
+            <div class="mt-24 m-5 flex flex-col items-center">
                 <div class="text-3xl font-bold text-sky-300">Thanh toán thuận tiện</div>
                 <div class="mt-5 text-black text-xl w-96">QR với đầy đủ nội dung và số tiền, hạn chế nhầm lẫn. Nút
                     bấm giúp gửi thông báo tới người yêu cầu, đồng thời dễ dàng biết được các giao dịch đang chờ.
                 </div>
             </div>
         </div>
-        <div class="mt-48 grid grid-cols-2 place-content-center">
+        <div class="mt-48 flex flex-col gap-5 md:flex-row place-content-center">
             <div class="mt-10 place-self-center">
                 <div class="text-3xl font-bold text-amber-400">Quản lý dễ dàng</div>
                 <div class="mt-5 text-black text-xl w-96">Dễ dàng biết được giao địch đã thanh toán và giao dịch
@@ -102,7 +134,7 @@
             <img class="w-[500px]" src="./img/05-paid-2x.png" />
         </div>
         <!-- Home App -->
-        <div class="mt-48 grid grid-cols-2">
+        <div class="mt-48 flex flex-col-reverse gap-5 md:flex-row">
             <img class="w-[600px] place-self-end" src="./img/06-app-home-1.5x.png" />
             <div class="mt-32 place-self-start ml-10">
                 <div class=" text-emerald-300 text-3xl font-bold">Home App tiện lợi</div>
@@ -114,7 +146,7 @@
         </div>
 
         <!-- App Mention -->
-        <div class="mt-48 grid grid-cols-2 place-content-center">
+        <div class="mt-48 flex flex-col gap-5 md:flex-row place-content-center">
             <div class="place-self-center">
                 <div class="text-sky-300 text-3xl font-bold">Đặt đơn cùng nhau</div>
                 <div class="mt-10 w-96 text-xl">
@@ -128,7 +160,7 @@
         </div>
 
         <!-- App Mention Watch -->
-        <div class="mt-48 grid grid-cols-2">
+        <div class="mt-48 flex flex-col-reverse gap-5 md:flex-row">
             <img class="place-self-center" src="./img/08-app-mention-watch-1x.png" />
             <div class="">
                 <div class="text-pink-600 text-3xl font-bold">Thanh toán trước, đếm người sau</div>
@@ -147,7 +179,7 @@
             <div class="text-zinc-600 text-xl font-semibold">Cách cài đặt</div>
             <div class="text-zinc-900 text-3xl mt-2 font-bold">Thu Họ</div>
         </div>
-        <div class="mt-10 mx-auto container grid grid-cols-3">
+        <div class="mt-10 mx-auto container flex flex-col md:flex-row justify-center gap-8">
             <div class="text-center">
                 <div class="text-emerald-300 text-xl font-semibold">Step 1</div>
                 <div class="text-zinc-600 py-4">
