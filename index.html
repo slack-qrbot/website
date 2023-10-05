@@ -96,20 +96,20 @@
 
     <!-- PC -->
     <div class="bg-slate-900 h-[850px] hidden md:block">
-        <div class="flex flex-col gap-5 py-10 px-2 mx-10">
+        <div class="flex flex-col gap-5 py-10 px-2 overflow-hidden" style="
+">
             <div class="mt-10 flex flex-col gap-5 items-center z-10">
                 <div class="text-white text-5xl">Tạo QR thanh toán</div>
                 <div class="text-white text-8xl font-bold mt-5">Thu Họ</div>
-                <div class="max-w-[700px] mt-2 text-4xl text-white font-extralight">Bot giúp bạn tạo QR nhanh
+                <div class="max-w-[40rem] mt-2 text-4xl text-white font-extralight">Bot giúp bạn tạo QR nhanh
                     chóng trên Slack, lưu trữ account, tạo QR dựa trên số lượng reaction.
                 </div>
-                <a target="_blank" href="https://qr.dotuan.dev/slack/install" class="scale-150">
-                    <img alt="Add to Slack" height="40" width="139"
-                        src="https://platform.slack-edge.com/img/add_to_slack@2x.png" />
+                <a target="_blank" href="https://qr.dotuan.dev/slack/install" class="scale-150 mt-10">
+                    <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack@2x.png">
                 </a>
             </div>
-            <div class=" mt-20 translate-x-[50vw]">
-                <img class="h-[550px] float" src="./img/01-app.png" />
+            <div class="mt-10 translate-x-[55vw] w-fit">
+                <img class="h-[550px] float" src="./img/01-app.png">
             </div>
         </div>
     </div>
@@ -237,16 +237,16 @@
                     <img class="inline-block mt-4" src="./img/00-thu-ho-logo-50px.png" />
                 </div>
             </div>
-            <div class="text-center py-10">
-                Made by <strong>@dotuancd</strong> with ❤️‍🔥 Sponsored by
-                <strong>FLINTERS VIETNAM</strong>
+            <div class="text-center py-16">
+                Made by <a target="_blank" href="https://github.com/dotuancd"><strong>@dotuancd</strong></a> with ❤️‍🔥 Sponsored by
+                <a target="_blank" href="https://www.flinters.vn/"><strong>FLINTERS VIETNAM</strong></a
             </div>
         </footer>
     </section>
 
     <!-- PC -->
     <section class="hidden lg:block">
-        <p class="text-center w-2/6 mx-auto mt-[350px] my-16 text-zinc-900 text-lg">
+        <p class="text-center mx-auto max-w-[30rem] mt-[350px] my-16 text-zinc-900 text-lg">
             Dễ dàng tạo mã PC
             <strong>QR</strong>
             ngay trên
@@ -255,48 +255,52 @@
             nào đó.
         </p>
         <div class="container mx-auto flex flex-col items-center gap-36 mb-36">
-
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <div class="flex flex-col items-center justify-center gap-6">
+            <!-- Create QR -->
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-center text-emerald-300 text-3xl font-bold">Tạo mã QR trong một nốt nhạc</div>
                     <div class="text-black text-xl w-96">Hỗ trợ tạo mã QR thanh toán qua ngân hàng và Ví điện tử
                         MoMo với số tiền và nội dung cần thanh toán. Có thể gửi tới nhiều người cùng lúc.</div>
                 </div>
-                <img src="./img/03-create-qr-1.5x.png" />
+                <img src="./img/03-create-qr-1.5x.png">
             </div>
 
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <img src="./img/04-btn-paid.png" />
-                <div class="flex flex-col items-center justify-center gap-6">
+            <!-- QR Pay -->
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <img src="./img/04-btn-paid.png">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-3xl font-bold text-sky-300">Thanh toán thuận tiện</div>
                     <div class="text-black text-xl w-96">QR với đầy đủ nội dung và số tiền, hạn chế nhầm lẫn. Nút
                         bấm giúp gửi thông báo tới người yêu cầu, đồng thời dễ dàng biết được các giao dịch đang chờ.
                     </div>
                 </div>
             </div>
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <div class="flex flex-col items-center justify-center gap-6">
+
+            <!-- Easy to manage -->
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-3xl font-bold text-amber-400">Quản lý dễ dàng</div>
                     <div class="text-black text-xl w-96">Dễ dàng biết được giao địch đã thanh toán và giao dịch
                         đang chờ.</div>
                 </div>
-                <img class="w-[500px]" src="./img/05-paid-2x.png" />
+                <img class="w-[500px]" src="./img/05-paid-2x.png">
             </div>
+
             <!-- Home App -->
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <img class="w-[600px] place-self-end" src="./img/06-app-home-1.5x.png" />
-                <div class="flex flex-col items-center justify-center gap-6">
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <img class="w-[600px] place-self-end" src="./img/06-app-home-1.5x.png">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-emerald-300 text-3xl font-bold">Home App tiện lợi</div>
                     <div class="text-black text-xl font-normal">
-                        Rất nhiều tính năng có thể tương tác trực <br />
+                        Rất nhiều tính năng có thể tương tác trực <br>
                         tiếp qua Home App một cách nhanh chóng, tiện lợi.
                     </div>
                 </div>
             </div>
 
             <!-- App Mention -->
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <div class="flex flex-col items-center justify-center gap-6">
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-sky-300 text-3xl font-bold">Đặt đơn cùng nhau</div>
                     <div class="w-96 text-xl">
                         Mention
@@ -305,18 +309,18 @@
                         nhanh đến thế.
                     </div>
                 </div>
-                <img class="" src="./img/07-reaction-1x.png" />
+                <img class="" src="./img/07-reaction-1x.png">
             </div>
 
             <!-- App Mention Watch -->
-            <div class="flex justify-between w-full xl:px-[10%]">
-                <img class="" src="./img/08-app-mention-watch-1x.png" />
-                <div class="flex flex-col items-center justify-center gap-6">
+            <div class="flex justify-center w-full items-center lg:gap-5 2xl:gap-40">
+                <img class="" src="./img/08-app-mention-watch-1x.png">
+                <div class="flex flex-col justify-center gap-3">
                     <div class="text-pink-600 text-3xl font-bold">Thanh toán trước, đếm người sau</div>
                     <div class="w-96 text-xl">
                         Cùng nhau góp quỹ, mention <strong>@thu_ho watch :emoji:</strong>
                         để đếm số lượng người hoàn thành thanh toán. Mã thanh toán sẽ được gửi ngay trong
-                        thread giúp mọi người thanh toán. Sau đó người dùng sẽ reaction. </span></div>
+                        thread giúp mọi người thanh toán. Sau đó người dùng sẽ reaction. </div>
                 </div>
             </div>
         </div>
@@ -324,47 +328,46 @@
 
         <!-- Footer -->
         <footer class="bg-stone-50 flex flex-col items-center gap-6">
-            <div class="text-center mt-16">
-                <div class="flex items-center text-zinc-600 text-xl font-semibold">Cách cài đặt: <span
-                        class="text-zinc-900 text-3xl font-bold">Thu Họ</span></div>
+            <div class="mt-16 flex flex-col text-center items-center">
+                <div class="text-zinc-600 text-xl font-semibold">
+                    <div>Cách cài đặt</div>
+                    <div class="mt-2 text-zinc-900 text-3xl font-bold">Thu Họ
+                </div>
             </div>
-            <div class="container flex justify-around gap-8">
+            <div class="mt-8 container flex justify-around gap-8">
                 <div class="text-center">
-                    <div class="text-emerald-300 text-xl font-semibold">Step 1</div>
+                    <div class="text-emerald-300 text-xl font-semibold">Bước 1</div>
                     <div class="text-zinc-600  my-4">
-                        Thêm Thu Họ vào <br />
-                        workspace bằng cách click <br />
+                        Thêm Thu Họ vào <br>
+                        workspace bằng cách click <br>
                         vào nút <strong>Add to Slack</strong>
                     </div>
                     <a target="_blank" href="https://qr.dotuan.dev/slack/install">
-                        <img class="inline-block" alt="Add to Slack" height="40" width="139"
-                            src="https://platform.slack-edge.com/img/add_to_slack.png"
-                            srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
+                        <img class="inline-block" alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x">
                     </a>
                 </div>
                 <div class="text-center">
-                    <div class="text-sky-300 text-xl font-semibold">Step 2</div>
+                    <div class="text-sky-300 text-xl font-semibold">Bước 2</div>
                     <div class="text-zinc-600  mt-4">
-                        Allows Thu Họ với các quyền cần <br />
-                        thiết để có thể sử dụng tính năng <br />
-                        @app_mention và đọc emoji trong <br />
+                        Allows Thu Họ với các quyền cần <br>
+                        thiết để có thể sử dụng tính năng <br>
+                        @app_mention và đọc emoji trong <br>
                         thread.
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="text-pink-600 text-xl font-semibold">Step 3</div>
+                    <div class="text-pink-600 text-xl font-semibold">Bước 3</div>
                     <div class="text-zinc-600  mt-4">
-                        Done! Thêm account và tận hưởng <br />
+                        Done! Thêm account và tận hưởng <br>
                         những tính năng tuyệt vời.
                     </div>
-                    <img class="inline-block mt-4" src="./img/00-thu-ho-logo-50px.png" />
+                    <img class="inline-block mt-4" src="./img/00-thu-ho-logo-50px.png">
                 </div>
             </div>
-            <div class="text-center py-10">
-                Made by <a target="_blank" href="https://github.com/dotuancd"><strong>@dotuancd</strong></a> with ❤️‍🔥 Sponsored by
-                <a target="_blank" href="https://www.flinters.vn/">><strong>FLINTERS VIETNAM</strong></a
-            </div>
-        </footer>
+            <div class="text-center py-16">
+                Made by <a target="_blank" href="https://github.com/dotuancd"><strong>@dotuancd</strong></a> with ❤️&zwj;🔥 Sponsored by
+                <a target="_blank" href="https://www.flinters.vn/"><strong>FLINTERS VIETNAM</strong></a>
+        </div></div></footer>
 
     </section>
 </body>
